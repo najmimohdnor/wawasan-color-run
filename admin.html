@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <!------icons-------->
+     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+     <!----- bootstrap -------->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- Stylesheet-->
+    <link rel="stylesheet" href="admin.css" />
+
+    <title>Sidebar</title>
+  </head>
+  <body>
+    <!-----------Dashboard------------->
+    <div class="dashboard" id="dashboard">
+        <div class="text">Dashboard</div>
+    </div>
+    
+    <!-----------Sidebar----------->
+    <div class="container">
+      <div class="sidebar">
+        <div class="menu-btn">
+            <i class="fa-solid fa-angle-left"></i>
+        </div>
+        <div class="head">
+          <div class="user-img">
+            <img src="user-image.jpg" alt=""./>
+          </div>
+          <div class="user-details">
+            <p class="name">Username</p>
+            <p class="title">Admin</p>
+          </div>
+        </div>
+        <div class="nav">
+            <div class="menu">
+                <p class="title">Main</p>
+                <ul class="menu-item">
+                    <li >
+                        <a href="#">
+                            <i class='bx bxs-dashboard icon'></i>
+                            <span class="text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class='bx bx-user icon' ></i>
+                            <span class="text">Participants</span>
+                            <i class='bx bx-chevron-down arrow' ></i>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="#">
+                                    <span class="text">Category</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="text">Submissions</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class='bx bx-file icon' ></i>
+                            <span class="text">Post</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class='bx bx-calendar-alt icon' ></i>
+                            <span class="text">Schedule</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class='bx bx-food-menu icon' ></i>
+                            <span class="text">Form</span>
+                            <i class='bx bx-chevron-down arrow' ></i>
+                        </a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="#">
+                                    <span class="text">Add</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="text">Delete</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu">
+                <p class="title">Settings</p>
+                <ul class="menu-item">
+                    <li>
+                        <a href="#">
+                            <i class='bx bx-cog icon' ></i>
+                            <span class="text">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="menu">
+            <p class="title">Account</p>
+            <ul class="menu-item">
+                <li>
+                    <a href="#">
+                        <i class='bx bx-edit icon' ></i>
+                        <span class="text">Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class='bx bx-log-out-circle icon' ></i>
+                        <span class="text">Log Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+    <!-- Jquery -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js"
+      integrity="sha512-8Z5++K1rB3U+USaLKG6oO8uWWBhdYsM3hmdirnOEWp8h2B1aOikj5zBzlXs8QOrvY9OxEnD2QDkbSKKpfqcIWw=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="admin.js"></script>
+  </body>
+</html>

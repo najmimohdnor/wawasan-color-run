@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+     /*colors*/
+     --body-color: #eff2fa;
+     --sidebar-color: #ffffff;
+     --primary-color: #695CFE;
+     --primary-color-light: #F6F5FF;
+     --toggle-color: #DDD;
+     --text-color: #707070;
+     --header-color: #000000;
+     --tooltiptext-color:#fff;
+     --contactbox-color:#fff;
+     --contactinput-color: #f8f9fd;
+     --contactinput-hover: #e4e4ff;
+     --contactbox-text: #a7a4e7;
+     --sidebar-toggle-hover: #4c00ff;
+     --sidebar-toggle: #695CFE;
+     --clearbtn-color: #ffe9e9;
+     --clearbtn-hover: #ff8080;
+     --cleartext-color:#793939;
+     --toggle-text: #ffffff;
+     --faqbox-color: #ffffff;
+     --faqbox-hover: rgba(98, 0, 255, 0.05);
+     --toggle-icon:#ffffff;
+     --faqbutton-hover: #fff;
+     --banner-shadow: #383838;
+     --box-color:#686868;
+     --mode-color: #707070;
+     --signbox-color: #fff;
+     --hide-color:#695CFE;
+     --countdown-color: #ffae00;
+     --countdown-shadow:#a7a4e7;
+     --footer-color:#695CFE;
+     --about-color:#ffffff;
+     --box-about:rgba(0, 0, 0, 0.115);
+     --first-color: hsl(82, 60%, 28%);
+     --title-color: hsl(0, 0%, 15%);
+     --text-color: hsl(0, 0%, 35%);
+     --body-color: hsl(0, 0%, 95%);
+     --container-color: hsl(0, 0%, 100%);
+     
+  
+     /*transition*/
+     --tran-02: all 0.2s ease;
+     --tran-03: all 0.3s ease;
+     --tran-04: all 0.4s ease;
+     --tran-05: all 0.5s ease;
+}
+body{
+    min-height: 100vh;
+    align-items: center;
+    background: var(--primary-color);
+}
+.form.show .form_container{
+    opacity: 1;
+    pointer-events: auto;
+    transform:scale(1);
+}
+.form::before{
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease-out;
+}
+.form.show::before{
+    opacity: 1;
+    pointer-events: auto;
+}
+.sidebar.close .login {
+    position: absolute;
+    padding: 12px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: transparent;
+    transition: all 0.5s;
+    opacity: 0;
+}
+.inactiveLink {
+    pointer-events: none;
+    cursor: default;
+}
+.form.container.active .signup_form{
+    display: block;
+}
+.form.container.active .login_form{
+    display: none;
+}
+.form_container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 320px;
+    width: 320px;
+    margin-left: 10px;
+    background: var(--signbox-color);
+    padding: 25px;
+    border-radius: 30px;
+    box-shadow: 0px 5px 150px rgba(0, 0, 0, 0.39);
+    transition: all 0.3s ease-in-out;
+}
+.form_container h2{
+    font-size: 22px;
+    color: var(--header-color);
+    text-align: center;
+}
+.form-close{
+    position: absolute;
+    top:10px;
+    right:20px;
+    color: var(--header-color);
+    font-size: 24px;
+    opacity: 0.7;
+    cursor: pointer;
+}
+.input_box{
+    position: relative;
+    margin-top:30px;
+    width:100%;
+    height: 100%;
+    background-color: var(--contactinput-color);
+    border-radius:20px;
+    
+}
+.input_box input{
+    width: 80%;
+    border: none;
+    outline: none;
+    text-align: center;
+    background-color: transparent;
+    color: var(--text-color);
+    padding: 15px 30px;
+    transition: all 0.2s ease;
+    position: relative;
+    left:20px;
+}
+.input_box .input:hover{
+    color: var(--primary-color);
+}
+.input_box input:focus {
+    color: var(--primary-color);
+}
+.input_box i{
+    position: absolute;
+    top: -60%;
+    right: -10px;
+    font-size:18px;
+}
+.input_box i.name,
+.input_box i.pass,
+.input_box i.mail{
+    left:20px;
+    top: 15px;
+    color:var(--text-color)
+}
+.input_box i.hide {
+    padding: 5px 10px;
+    background-color: var(--hide-color);
+    right:7px;
+    top: 14%;
+    font-size: 18px;
+    color: var(--sidebar-color);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 1s;
+}
+.input_box .input.placeholder:hover{
+    color: var(--primary-color);
+}
+.input_box input:focus ~ i.name,
+.input_box input:focus ~ i.pass,
+.input_box input:focus ~ i.mail{
+    color: var(--primary-color);
+}
+.option-field{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.form_container a{
+    color: var(--primary-color);
+    margin-left: 12px;
+    font-size: 12px;
+    text-decoration: none;
+}
+.form_container a:hover{
+    text-decoration: underline;
+}
+.form_container .button{
+    background: var(--primary-color);
+    margin-top: 30px;
+    width:100%;
+    padding:10px 0;
+    color: var(--sidebar-color);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.form_container .button:hover{
+    box-shadow: 0px 0px 50px var(--primary-color);
+}
+.login_signup{
+    font-size:12px;
+    margin-right: 12px;;
+    text-align: center;
+    margin-top: 15px;
+    color: var(--header-color);
+}
+input[type=password]::-ms-reveal,
+input[type=password]::-ms-clear
+{
+   display: none;
+}
+.user-type{
+    position: relative;
+    margin-top:30px;
+    width:100%;
+    height: 100%;
+    background-color: var(--contactinput-color);
+    border-radius:20px;
+}
+.msg{ 
+    font-size: 14px;
+    background-color: rgb(255, 216, 216);
+    text-align: center;
+    margin-top: 20px;
+    color: crimson;
+    border-radius: 5px;
+}
